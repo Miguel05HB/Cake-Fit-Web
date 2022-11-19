@@ -1,0 +1,87 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	font-family: 'Atma', cursive;
+}
+
+.texts-menu {
+	display: flex;
+	font-size: 20px;
+	gap: 0 20px;
+}
+
+.letra-1 {
+	position: absolute;
+	width: 405px;
+	height: 19px;
+	top: 10%;
+	left: 40px;
+	/* Armata_Regular_15 */
+	font-family: 'Armata';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 19px;
+	/* identical to box height */
+	color: #000000;
+}
+
+.letra-2 {
+	position: absolute;
+	width: 515px;
+	height: 310px;
+	top: 12%;
+	left: 40px;
+	/* Atma_Regular_96 */
+	font-family: 'Atma';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 96px;
+	line-height: 155px;
+	color: #71B55A;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.letra-3 {
+	position: absolute;
+	width: 481px;
+	height: 118px;
+	top: 55%;
+	left: 40px;
+	/* Athiti_Regular_30 */
+	font-family: 'Athiti';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 48px;
+	color: #000000;
+}
+
+.img-pastel {
+	position: absolute;
+	width: 35%;
+	height: auto;
+	top: 20%;
+	left: 63%;
+}
+
+.boton-menu {
+	position: absolute;
+	width: 246px;
+	height: 65px;
+	top: 80%;
+	left: 40px;
+	border: none;
+	background: #FA728B;
+	border-radius: 10px;
+	color: #FFFFFF;
+}
+
+.img-fluid {
+	max-width: 100%;
+	height: auto;
+}
+

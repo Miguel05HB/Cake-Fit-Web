@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="/assets/Rectangle 2.png"
+	type="image/gif" />
+<link rel="stylesheet" th:href="@{/boostrap/bootstrap.min.css}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/whatsapp.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link
+	href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap"
+	rel="stylesheet">
+<title th:text="${TituloPagina}"></title>
+</head>
+<body>
+	<a
+		href="https://api.whatsapp.com/send?phone=51978546321&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Cake%20Fit."
+		class="float" target="_blank"> <i class="fa fa-whatsapp my-float"></i>
+	</a>
+
+	<header class="w-100">
+		<nav class="navbar navbar-expand-lg navbar-light w-100 col-xl-12"
+			style="background: #FCDAE0">
+			<a class="navbar-brand" href="/app/home"> <img
+				src="/assets/Rectangle 2.png" width="80" height="80" alt="">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mx-auto texts-menu">
+					<li class="nav-item"><a class="nav-link" href="/nosotros"
+						th:text="${Nosotros}"> <span class="sr-only"></span>
+					</a></li>
+					<li class="nav-item"><a class="nav-link" href="#"
+						th:text="${Productos}"></a></li>
+					<li class="nav-item"><a class="nav-link" href=""
+						th:text="${Locales}"></a></li>
+					<li class="nav-item"><a class="nav-link" href="/app/contacto"
+						th:text="${Contacto}"></a></li>
+
+				</ul>
+				<form class="form-inline my-2 my-lg-0">
+
+					<a href="/login"
+						class="btn btn-primary btn-lg active" role="button"
+						aria-pressed="true">LOGIN</a>
+				</form>
+			</div>
+		</nav>
+	</header>
+
+
+	<div class="col">
+		<div class="row">
+			<img src="/assets/Vector 1.png" class="img-fluid w-100"
+				style="height: 75vh" alt="">
+
+			<div class="letra-1">100% NUTRITIVOS 0% AZUCARES 1000%
+				DELICIOSOS</div>
+			<div class="letra-2">PASTELES SALUDABLES</div>
+			<div class="letra-3" th:text="${Subtitle}"></div>
+			<button class="boton-menu" type="submit">
+				<h1>VER MENÚ</h1>
+			</button>
+			<img class="img-fluid img-pastel" src="/assets/pastel.png" alt="">
+		</div>
+
+
+	</div>
+
+
+	<div class="container-fluid">
+
+		<div class="row">
+			<div class="col">
+				<div class="d-flex justify-content-center">
+					<img src="/assets/icons/icons1.png" class="icons1 m-3" alt="">
+					<div class="d-flex justify-content-center align-items-center">Ideal
+						para dieta adecuada</div>
+
+				</div>
+			</div>
+
+			<div class="col">
+				<div class="d-flex justify-content-center">
+
+					<img src="/assets/icons/icons2.png" class="icons2 m-3" alt="">
+					<div class="d-flex justify-content-center align-items-center">Productos
+						veganos</div>
+				</div>
+			</div>
+
+			<div class="col">
+				<div class="d-flex justify-content-center">
+
+					<img src="/assets/icons/icons3.png" class="icons3 m-3" alt="">
+					<div class="d-flex justify-content-center align-items-center">No
+						contiene grasas de la leche</div>
+				</div>
+			</div>
+
+			<div class="col">
+				<div class="d-flex justify-content-center">
+
+					<img src="/assets/icons/icons4.png" class="icons4 m-3" alt="">
+					<div class="d-flex justify-content-center align-items-center">Bajo
+						en calorias y saludable</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="container-fluid mt-5">
+		<div class="d-flex justify-content-center">
+			<h1 class="mt-5 mb-5">SOLO HECHA UN VISTASO A NUESTROS PASTELES</h1>
+		</div>
+	</div>
+
+
+	<div class="container cards">
+		<div class="card-group text-center">
+			<div class="card m-3 border-0">
+				<img class="card-img-top" src="/assets/card1.jpg"
+					alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title">Pastel de AVENA con FRESAS y QUESO
+						CREMA.</h5>
+					<p class="card-text">Consiente a tu familia con el mejor pastel
+						de avena que hayas probado en tu vida. Este esponjoso pastel de
+						avena con fresas y queso crema queda súper esponjoso y con un
+						sabor espectacular. ¡pruébalo!</p>
+
+					<h3 class="card-title">S/. 32</h3>
+					<a href="#" class="btn btn-danger">COMPRAR AHORA</a>
+				</div>
+			</div>
+			<div class="card m-3 border-0">
+				<img class="card-img-top" src="/assets/card2.png"
+					alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title">Torta de chocolúcuma</h5>
+					<p class="card-text">Bizcocho suave y húmedo de chocolate,
+						relleno de mousse de lúcuma artesanal; decorado con el fudge de
+						Patty y virutas de chocolate. Conservar refrigerado. Este producto
+						contiene harina, leche, aceite, vinagre, cocoa, huevos, azúcar,
+						polvo de hornear, chocolate de leche, pulpa de lúcuma.</p>
+					<h3 class="card-title">S/. 35</h3>
+					<a href="#" class="btn btn-danger">COMPRAR AHORA</a>
+				</div>
+			</div>
+			<div class="card m-3 border-0">
+				<img class="card-img-top" src="/assets/card3.jpg"
+					alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title">Queque de Chocolate con Aceite de
+						Oliva, sin Lactosa</h5>
+					<p class="card-text">Y es que el chocolate es bienvenido
+						siempre, nos fascina, y créanme que este Queque de Chocolate con
+						Aceite de Oliva, que además es sin lactosa, no será la excepción,
+						para un mayor sabor y textura al probarlo.</p>
+					<h3 class="card-title">S/. 40</h3>
+					<a href="#" class="btn btn-danger">COMPRAR AHORA</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+
+
+
+
+	<script th:src="@{/boostrap/bootstrap.jquery-3.2.1.slim.min.js}"></script>
+	<script th:src="@{/boostrap/popper.min.js}"></script>
+	<script th:src="@{/boostrap/bootstrap.min.js}"></script>
+</body>
+</html>

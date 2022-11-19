@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="/assets/Rectangle 2.png"
+	type="image/gif" />
+<link rel="stylesheet" th:href="@{/boostrap/bootstrap.min.css}">
+<link rel="stylesheet" href="/css/nosotros.css">
+<link rel="stylesheet" href="/css/whatsapp.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap"
+	rel="stylesheet">
+	
+	<link href=" http://fonts.cdnfonts.com/css/bakbak-one " rel="hoja de estilo">
+    <link href=" http://fonts.cdnfonts.com/css/athiti " rel="hoja de estilo">
+                            
+	
+<title th:text="${TituloPagina}"></title>
+</head>
+<body style="background:#FCDAE0 ">
+
+	<a
+		href="https://api.whatsapp.com/send?phone=51978546321&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Cake%20Fit."
+		class="float" target="_blank"> <i class="fa fa-whatsapp my-float"></i>
+	</a>
+
+	<header class="w-100">
+		<nav class="navbar navbar-expand-lg navbar-light w-100 col-xl-12"
+			style="background: #FCDAE0">
+			<a class="navbar-brand" href="/app/home"> <img
+				src="/assets/Rectangle 2.png" width="80" height="80" alt="">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mx-auto texts-menu">
+					<li class="nav-item active"><a class="nav-link" href="/nosotros"
+						th:text="${Nosotros}"> <span class="sr-only"></span>
+					</a></li>
+					<li class="nav-item"><a class="nav-link" href="#"
+						th:text="${Productos}"></a></li>
+					<li class="nav-item"><a class="nav-link" href=""
+						th:text="${Locales}"></a></li>
+					<li class="nav-item"><a class="nav-link" href="#"
+						th:text="${Contacto}"></a></li>
+
+				</ul>
+				<form class="form-inline my-2 my-lg-0">
+
+					<a href="/login"
+						class="btn btn-primary btn-lg active" role="button"
+						aria-pressed="true">LOGIN</a>
+				</form>
+			</div>
+		</nav>
+	</header>
+
+
+	<img src="/assets/Union.png" class="img-union"
+		style="height: 100vh" alt="">
+	<img class="img-fluid img-pastelito" src="/assets/pastelito.png" alt="">
+	
+	<img src="/assets/galletas.png" class="img-cokie"
+		 alt="">
+
+	<div class="container-fluid">
+		<h1 class="letra-2">Vive la Experiencia Cake Fit</h1>
+		<h1 class="letra-3">Nuestros productos son altamente nutritivos y aportan muchos beneficios para la salud, pensando siempre en el bienestar de nuestros consumidores desarrollamos los productos para que puedan ser consumidos por personas que siguen una dieta vegana, con alguna restricción como celiácos y diabéticos, también por personas deportistas que siguen una dieta saludable en general.
+		</h1>
+		<h1 class="letra-4">PASTELERIA SALUDABLE</h1>
+		
+		<h1 class="letra-5">Producto 100% Peruano <br>
+		                    Nos Preocupamos de Cada Detalle <br>
+		                    Fina Selección de Ingredientes<br>
+		                    Servicio Delivery 10/10<br>
+		                    Cumplimos con Todos los Protocolos de Higiene<br></h1>
+		                    
+		                    
+	<img src="/assets/t1.png" class="img-t1" alt="">
+	<img src="/assets/t2.png" class="img-t2" alt="">	
+	<img src="/assets/t3.png" class="img-t3" alt="">	
+	<img src="/assets/t4.png" class="img-t4" alt="">	
+	<img src="/assets/t5.png" class="img-t5" alt="">	
+	<img src="/assets/t6.png" class="img-t6" alt="">	
+	<img src="/assets/t7.png" class="img-t7" alt="">		
+	
+	                    
+
+	<button class="boton">
+			<h1 >Conoce mas</h1>
+			<img src="/assets/insta.png"  alt="">
+	</button> 
+		
+		
+		
+	</div>
+	
+	
+
+
+	<script th:src="@{/boostrap/bootstrap.jquery-3.2.1.slim.min.js}"></script>
+	<script th:src="@{/boostrap/popper.min.js}"></script>
+	<script th:src="@{/boostrap/bootstrap.min.js}"></script>
+</body>
+</html>

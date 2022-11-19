@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" th:href="@{/boostrap/bootstrap.min.css}">
+<link rel="stylesheet" href="/css/registro.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<script src="https://kit.fontawesome.com/40dfb2e73f.js"
+	crossorigin="anonymous"></script>
+<link
+	href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap"
+	rel="stylesheet">
+<title th:text="${TituloPagina}"></title>
+</head>
+<body>
+
+
+	<!-- Interfaz del login-->
+	<div id="contenedor">
+		<div id="contenedorcentrado">
+
+
+			<div id="login" >
+				<div class="titulo">Pasteleria Cake Fit!</div>
+				<form id="loginform">
+					<label for="usuario" ></label>
+
+
+						<input id="nombre" type="text"
+						name="nombre" placeholder="@Nombre" required> 
+						
+						<input id="apellidos" type="text"
+						name="apellidos" placeholder="@Apellidos" required> 
+						
+						<label for="start" style="color: black">Ingrese su fecha de nacimiento:</label>
+
+						<input type="date" id="start" name="trip-start"
+      					value="2022-00-00"
+       					min="1950-01-01" max="2023-1-1">
+						
+						<input id="email" type="email"
+						name="email" placeholder="@Correo" required> 
+						
+						
+					<label for=""></label> <input id="password" type="password"
+						placeholder="@Contraseña" name="contraseña" required>
+					
+					<input id="password2" type="password"
+						placeholder="@Repita su contraseña" name="contraseña2" required>
+
+						
+					<p class="text-center">
+						<button type="submit" title="Ingresar" name="Ingresar">Registrarse</button>
+					</p>
+					
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+	
+	
+	<img src="/assets/vector 1.png" class="img-fluidfondo w-100"
+		style="height: 80vh" alt="">
+
+	<script th:src="@{/boostrap/bootstrap.jquery-3.2.1.slim.min.js}"></script>
+	<script th:src="@{/boostrap/popper.min.js}"></script>
+	<script th:src="@{/boostrap/bootstrap.min.js}"></script>
+</body>
+</html>
