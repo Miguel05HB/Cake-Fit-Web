@@ -2,18 +2,20 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="utf-8">
-<title>Registro de usuarios</title>
+<title>Login</title>
 <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" type="text.css" href="/css/logincss.css">
+<link rel="stylesheet" href="/css/logincss.css">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
 	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
 	crossorigin="anonymous">
+	
 
 <!-- Optional theme -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
 	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
@@ -22,51 +24,56 @@
 <body style="background-color: pink; font-family: 'Atma', cursive;"  >
 
 
+
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
-				<div th:if=${param.exito}>
-					<div class="alert alert-info">Se ha registrado exitosamente a
-						la aplicación</div>
-				</div>
+			<div class="col-md-6 col-md-offset-3 ">
+				<h1><p class="text-center">Pasteleria Chispas</p></h1>
+				
+				<form th:action="@{/login}" method="post">
 
-				<h1><p class="text-center">Regístrarse</p></h1>
-				<form th:action="@{/registro}" method="post" th:object="${usuario}">
+					<div th:if=${param.error}>
+						<div class="alert alert-danger">Usuario o contraseña
+							inválidos</div>
+					</div>
+
+					<div th:if=${param.logout}>
+						
+					</div>
+
+
 					<div class="form-group">
-						<label class="control-label" for="nombre">Nombre : </label> <input
-							id="nombre" type="text" class="form-control"
-							required autofocus="autofocus">
+						<label  for="username">Correo : </label> <input id="username"  name="username" type="text" class="form-control"
+							required autofocus="autofocus" placeholder="@Usuario">
 					</div>
 
 					<div class="form-group">
-						<label class="control-label" for="apellido">Apellido : </label> <input
-							id="apellido" class="form-control"
-							required autofocus="autofocus">
+						<label  for="password">Ingrese su contraseña : </label> <input
+							id="password" type="password"  name="password" class="form-control" required
+							autofocus="autofocus" placeholder="@Contraseña">
 					</div>
 
 					<div class="form-group">
-						<label class="control-label" for="email">Email : </label> <input
-							id="email" type="email" class="form-control" 
-							required autofocus="autofocus">
-					</div>
-
-					<div class="form-group">
-						<label class="control-label" for="password">Contraseña : </label> <input
-							type="password" id="password" class="form-control"
-							required autofocus="autofocus">
-					</div>
-
-					<div class="form-group">
-						<button type="submit" class="btn btn-success">Registrarse</button>
-						<span>Si estas registrado <a th:href="@{/login}">inicie sesión aqui</a></span>
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3">
+								<input type="submit" class="btn btn-success" name="login-submit" id="login-submit"
+									value="Iniciar sesión" />
+							</div>
+						</div>
 					</div>
 				</form>
+				<div class="form-group">
+					<span>Si eres nuevo usuario <a th:href="@{/registro}">regístrate
+							aqui</a></span>
+				</div>
 
 			</div>
 		</div>
 	</div>
-<img src="/assets/vector1.png" class="img-fluid w-100"
-		style="height: 80vh" alt="">
+
+
+
+		
 	<script
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
 		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"

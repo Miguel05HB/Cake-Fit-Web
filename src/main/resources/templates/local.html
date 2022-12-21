@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="/assets/Rectangle 2.png"
+	type="image/gif" />
+<link rel="stylesheet" th:href="@{/boostrap/bootstrap.min.css}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+
+<link rel="stylesheet" href="/css/whatsapp.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link
+	href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap"
+	rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/locales.css">
+<style>
+@import
+	url('https://fonts.googleapis.com/css2?family=Atma:wght@500&display=swap')
+	;
+</style>
+<style>
+@import
+	url('https://fonts.googleapis.com/css2?family=Alike&display=swap');
+</style>
+<style>
+@import
+	url('https://fonts.googleapis.com/css2?family=Alike&family=Atma:wght@300&display=swap')
+	;
+</style>
+<title th:text="${TituloPagina}"></title>
+</head>
+<body>
+	<a
+		href="https://api.whatsapp.com/send?phone=51913919998&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Cake%20Fit."
+		class="float" target="_blank"> <i class="fa fa-whatsapp my-float"></i>
+	</a>
+
+	<header class="w-100">
+		<nav class="navbar navbar-expand-lg navbar-light w-100 col-xl-12">
+			<a class="navbar-brand" href="/app/home"> <img
+				src="/assets/Rectangle 2.png" width="80" height="80" alt="">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mx-auto texts-menu">
+					<li class="nav-item"><a class="nav-link" href="/nosotros"
+						th:text="${Nosotros}"> <span class="sr-only"></span>
+					</a></li>
+					<li class="nav-item"><a class="nav-link" href="#"
+						th:text="${Productos}"></a></li>
+					<li class="nav-item"><a class="nav-link" href="/locales"
+						th:text="${Locales}"></a></li>
+					<li class="nav-item"><a class="nav-link"
+						th:href="@{/contactos}" th:text="${Contacto}"></a></li>
+
+				</ul>
+				<form class="form-inline my-2 my-lg-0">
+
+					<a href="/login" class="btn btn-primary btn-lg active"
+						role="button" aria-pressed="true">LOGIN</a>
+				</form>
+			</div>
+		</nav>
+	</header>
+
+	<div class="text-center mt-5" style="color: #71B55A">
+		<h1>TU PASTELERIA CAKE FIT</h1>
+	</div>
+	<br>
+	<div class="container text-center mt-5">
+		<h1 style="font-size: 30px">En el año 2022 iniciamos con este
+			emprendimiento con mucho cariño y esfuerzo abrimos nuestra primera
+			tienda que funciona como una barra de pastelería y cafetería en un
+			pequeño local en la Av. La Mar, donde ofrecemos nuestros productos de
+			siempre, como galletas, café y kekes.</h1>
+
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="container mt-5 img-fluid">
+		<div class="row">
+			<div class="col-lg-6">
+				<img
+					src="https://i.pinimg.com/564x/c3/50/9a/c3509a88736ae3c9169fb0ae29242210.jpg"
+					class="img1" alt="" />
+			</div>
+			<div class="col-lg-3">
+				<img
+					src="https://i.pinimg.com/564x/c5/9a/35/c59a35694dc478be275476479d024422.jpg"
+					class="img2" alt="" />
+			</div>
+
+
+			
+
+		</div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<main>
+		<div class="container mt-5" style="background-color: #F4D1D2">
+			<h1 class="text-center" style="color: #71B55A">SAN MIGUEL</h1>
+			<br>
+			<div class="col">
+				<div class="row d-flex justify-content-around text-center">
+					<h2>
+						Llamanos <br> 913 919 998
+					</h2>
+					<h2>
+						Abierto toda la semana <br> 8:30 am - 10:00 pm
+					</h2>
+
+					<h2>
+						Descuentos especiales <br> del 20 al 31
+					</h2>
+				</div>
+			</div>
+		</div>
+
+	</main>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="container">
+		<iframe
+			src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d50804.13526056468!2d-77.1785971!3d-12.060193!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x9105c9533f64c75d%3A0xac803960e2aded46!2s1585%2C%20Miraflores%2015046!3m2!1d-12.078956999999999!2d-77.07753989999999!5e1!3m2!1ses!2spe!4v1671277069635!5m2!1ses!2spe"
+			width="1100" height="500" style="border: 0;" allowfullscreen=""
+			loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	</div>
+</body>
+</html>
+

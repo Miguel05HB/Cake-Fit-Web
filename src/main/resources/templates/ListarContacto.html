@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="/assets/Rectangle 2.png"
+	type="image/gif" />
+<link rel="stylesheet" th:href="@{/boostrap/bootstrap.min.css}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/whatsapp.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link
+	href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap"
+	rel="stylesheet">
+<title th:text="${TituloPagina}"></title>
+</head>
+<body>
+	<a
+		href="https://api.whatsapp.com/send?phone=51978546321&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Cake%20Fit."
+		class="float" target="_blank"> <i class="fa fa-whatsapp my-float"></i>
+	</a>
+
+	<header class="w-100">
+		<nav class="navbar navbar-expand-lg navbar-light w-100 col-xl-12">
+			<a class="navbar-brand" href="/app/home"> <img
+				src="/assets/Rectangle 2.png" width="80" height="80" alt="">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mx-auto texts-menu">
+					<li class="nav-item"><a class="nav-link" href="/nosotros"
+						th:text="${Nosotros}"> <span class="sr-only"></span>
+					</a></li>
+					<li class="nav-item"><a class="nav-link" href="#"
+						th:text="${Productos}"></a></li>
+					<li class="nav-item"><a class="nav-link" href=""
+						th:text="${Locales}"></a></li>
+					<li class="nav-item"><a class="nav-link" href="/contacto"
+						th:text="${Contacto}"></a></li>
+
+				</ul>
+				<form class="form-inline my-2 my-lg-0">
+
+					<a href="/login" class="btn btn-primary btn-lg active"
+						role="button" aria-pressed="true">LOGIN</a>
+				</form>
+			</div>
+		</nav>
+	</header>
+
+	<div class="container">
+		<div class="row">
+			<h1>Lista de Contactos</h1>
+		</div>
+		<table class="table table-striped table-bordered">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col">Nombres</th>
+					<th scope="col">Apellidos</th>
+					<th scope="col">Correo Electronico</th>
+					<th scope="col">Celular</th>
+					<th scope="col">Asunto</th>
+					<th scope="col">Comentario</th>
+					<th scope="col">Acciones</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each= "contacts: ${contactos}">
+					<td th:text="${contacts.nombres}">Nombres</td>
+					<td th:text="${contacts.apellidos}">Apellidos</td>
+					<td th:text="${contacts.correo}">Correo Electronico</td>
+					<td th:text="${contacts.celular}">Celular</td>
+					<td th:text="${contacts.asunto}">Asunto</td>
+					<td th:text="${contacts.comentario}">Comentario</td>
+					<td>
+						<a th:href="@{/contactos/editar/{id}(id=${contacts.idUsuario})}" class="btn btn-info">Editar</a>
+						<a th:href="@{/contactos/{id}(id=${contacts.idUsuario})}" class="btn btn-danger">Eliminar</a>
+					</td>
+				</tr>
+				
+			</tbody>
+		</table>
+	</div>
+
+
+</body>
+</html>

@@ -6,16 +6,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-
 @Controller
-
-public class LoginController {
+public class LocalesController {
 	@Autowired
+
 	@Value("${title.generic}")
 	private String titlePage;
 
-	@GetMapping("/login")
-	public String iniciarSesion(Model model) {
+	@GetMapping({ "/locales"})
+	public String Home(Model model) {
 
 		model.addAttribute("TituloPagina", titlePage);
 		model.addAttribute("Nosotros", "NOSOTROS");
@@ -23,7 +22,9 @@ public class LoginController {
 		model.addAttribute("Locales", "LOCALES");
 		model.addAttribute("Contacto", "CONTACTO");
 
-		return "login";
+		model.addAttribute("Subtitle",
+				"Si te encanta la comida sana pero no puedes decir que no a los pasteles, entonces nuestros pasteles son para ti.");
+		return "local";
 
 	}
 }

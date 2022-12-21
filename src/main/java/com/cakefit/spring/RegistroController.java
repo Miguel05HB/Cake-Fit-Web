@@ -6,24 +6,20 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-
 @Controller
-
-public class LoginController {
+public class RegistroController {
 	@Autowired
+
 	@Value("${title.generic}")
 	private String titlePage;
+	@GetMapping({"/registro", "/Registro"})
 
-	@GetMapping("/login")
-	public String iniciarSesion(Model model) {
-
+	public String Registro(Model model) {
 		model.addAttribute("TituloPagina", titlePage);
 		model.addAttribute("Nosotros", "NOSOTROS");
 		model.addAttribute("Productos", "PRODUCTOS");
 		model.addAttribute("Locales", "LOCALES");
 		model.addAttribute("Contacto", "CONTACTO");
-
-		return "login";
-
+		return "registro";
 	}
 }
